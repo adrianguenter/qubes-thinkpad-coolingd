@@ -1,0 +1,11 @@
+
+[Unit]
+Description=Qubes OS Thermal Management Daemon for Lenovo ThinkPads
+Before=qubes-core.service
+
+[Service]
+ExecStart=/usr/bin/dash /usr/local/share/qubes-thinkpad/coolingd.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
